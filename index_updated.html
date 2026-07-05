@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZelvicsMikez | Military Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:#08110d;color:#fff}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:center;gap:30px;padding:16px;background:#000a;backdrop-filter:blur(8px)}
+nav a{color:#fff;text-decoration:none}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),url("background.jpg") center/cover no-repeat fixed;}
+h1{font:700 64px Orbitron;color:#00ff88}
+.btn{display:inline-block;margin-top:20px;padding:14px 28px;background:#00ff88;color:#000;text-decoration:none;border-radius:8px;font-weight:700}
+section{padding:80px 10%}
+.grid,.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#121212;padding:22px;border-radius:12px;border-left:5px solid #00ff88}
+.old{border-left-color:#ff4d4d}
+.box{background:#111;padding:25px;border-radius:12px;text-align:center}
+.num{font-size:42px;color:#00ff88;font-weight:bold}
+.timeline{border-left:3px solid #00ff88;padding-left:20px}
+.timeline div{margin:14px 0}
+footer{text-align:center;padding:30px;color:#888}
+</style>
+</head>
+<body>
+<nav><a href="#current">Current</a><a href="#former">Former</a><a href="#timeline">Timeline</a><a href="#contact">Contact</a></nav>
+<section class="hero">
+<div><h1>ZELVICSMIKEZ</h1><p>Military Leadership Portfolio</p><a class="btn" onclick="enterPortfolio()">ENTER DOSSIER</a></div>
+</section>
+<div id="portfolio" style="display:none"><section id="dashboard">
+<h2>Portfolio Dashboard</h2>
+<div class="stats">
+<div class="box"><div class="num" data="23">0</div>Current Leadership Roles</div>
+<div class="box"><div class="num" data="14">0</div>Former Leadership Roles</div>
+<div class="box"><div class="num" data="20">0</div>Roleplay Organizations</div>
+<div class="box"><div class="num" data="4">0</div>Ownership Teams</div>
+<div class="box"><div class="num" data="10">0</div>Development Roles</div>
+</div></section>
+<section id="current"><h2>Current</h2><div class="grid">
+<div class="card"><h3>CUSA</h3><ul><li>USMC Lance Corporal</li><li>E8-A Master Sergeant</li></ul></div>
+<div class="card"><h3>USAC</h3><ul><li>Ownership Team</li><li>Group Holder</li><li>Head Developer</li></ul></div>
+<div class="card"><h3>ABA</h3><ul><li>RMP XO</li></ul></div>
+</div></section>
+<section id="former"><h2>Former</h2><div class="grid">
+<div class="card old"><h3>Upsetioz British Army</h3><p>RMP IB PDO (BRIGCOMM)</p></div>
+<div class="card old"><h3>RGR</h3><p>MDC C2iC (BRIGCOMM)</p></div>
+<div class="card old"><h3>CCPD</h3><p>Developer</p></div>
+<div class="card old"><h3>ECPD</h3><p>Deputy Chief</p></div>
+</div></section>
+<section id="timeline"><h2>Timeline</h2><div class="timeline">
+<div>🔴 Upsetioz British Army</div><div>🔴 RGR</div><div>🔴 CCPD</div><div>🔴 ECPD</div><div>🟢 ABA</div><div>🟢 CUSA</div><div>🟢 USAC Ownership Team</div><div>🟢 Head Developer</div>
+</div></section>
+
+<section id="contact">
+<h2>Contact</h2>
+<div class="grid">
+<div class="card">
+<h3>Roblox</h3>
+<p><strong>DINESHPROAM</strong></p>
+</div>
+<div class="card">
+<h3>Discord</h3>
+<p><strong>@dragonplayzrblx</strong></p>
+</div>
+</div>
+</section>
+
+
+<section id="contact"><h2>Contact</h2><div class="grid">
+<div class="card"><h3>Roblox</h3><p>DINESHPROAM</p></div>
+<div class="card"><h3>Discord</h3><p>@dragonplayzrblx</p></div>
+</div></section>
+<footer>© 2026 ZelvicsMikez</footer>
+<script>
+document.querySelectorAll('.num').forEach(n=>{let t=+n.dataset,c=0;let i=setInterval(()=>{c++;n.textContent=c+'+';if(c>=t)clearInterval(i)},40);});
+</script>
+</div><script>function enterPortfolio(){document.getElementById("portfolio").style.display="block";document.getElementById("portfolio").scrollIntoView({behavior:"smooth"});document.querySelector(".hero").style.display="none";}</script></body></html>
